@@ -1,0 +1,35 @@
+# .gitignore
+@'
+# --- Unreal Engine ---
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+Builds/
+Content/Paks/
+*.pak
+*.ucas
+*.utoc
+*.sig
+
+# --- Visual Studio / IDE ---
+.vs/
+.vscode/
+*.sln
+*.suo
+*.opensdf
+*.sdf
+*.VC.db
+*.VC.opendb
+*.vcxproj*
+*.ipch
+
+# --- Logs & misc ---
+*.pdb
+*.log
+*.obj
+
+# --- OS junk ---
+.DS_Store
+Thumbs.db
+'@ | Set-Content -Encoding UTF8 .gitignore
