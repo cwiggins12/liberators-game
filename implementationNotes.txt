@@ -1,0 +1,19 @@
+core folder:
+GameMode
+GameState
+PlayerController
+
+art pipeline:
+see if asset forge and mixamo are cool
+
+to do this week:
+need functions for going to and from last widget in settings and inventory (theres a widget for that, check fps sesh)
+need function to set selected unit when going back to HUD from settings "					"
+
+fuckin refactor this state machine to utilize the gameplay state tree, dummy
+make game lighting ambivalent
+if time permits, get path working going
+get alternating state between turns in battle, 
+
+Things to remember:
+the battle level always initializes to placement state, this will need to be changed when save/load is implemented
