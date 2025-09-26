@@ -1,0 +1,37 @@
+entire state tree flow:
+On every state change, update Enum to current state and save, there will be no backing out to a prior phase, All states can save and exit to main menu
+
+on choices enter, check mode Enum, if already reward, go there, else go path choice
+
+in reward, open reward widget and remove all others
+to exit reward, have 1 of 3 rewards selected and click confirm button
+On exit reward, enter equip, 
+
+In equip, open inventory widget and remove all others, 
+To exit equip, click enter battle button
+On exit equip, enter path,
+
+In path, open path widget and remove all others
+to exit path, have 1 of 3 paths selected and click confirm button
+On exit path, enter battle
+
+On battle enter, check mode Enum, if not placement, go to Enum setting,
+
+On placement enter, clear widgets and open hud, delete last grid and all enemies, get struct to inform grid, make grid and place enemies, set all hexs to placement mode, generate starting initiative array
+To exit placement, all player units must be on field, and the confirm button is clicked
+On exit placement, enter first listed turn(enemy or player) in initiative, 
+
+In enemy turn, player can still get tooltips and select units, but nothing but player units are clickable, All buttons are greyed out on player HUD, enemy unit AI does its movement and action, then ends turn, if next is enemy, next enemy goes,
+To exit enemy turn, player unit is next (goto player turn) | all player units die (goto player death) | all enemies die(goto battle win)
+
+In player turn, check next in init array until enemy unit and mark all units available, if player selects other unit in list of available, player can move or act, when move or act is completed grey out unit in init array hud element mark unavailable and select first available unit,
+do the same when a selected unit is available and skip button is pressed, 
+To exit player turn, no available units (goto enemy turn) | all enemy units die (goto battle win) | all player units die (goto player death)
+
+On battle win enter, clear widgets and open battle win widget, 
+To exit battle win, click confirm button,
+On exit battle win, enter rewards,
+
+On player death enter, clear widgets and open player death widget,
+To exit player death, click confirm button,
+On exit player death, open main menu level

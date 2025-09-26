@@ -1,19 +1,20 @@
-core folder:
-GameMode
-GameState
-PlayerController
-
 art pipeline:
-see if asset forge and mixamo are cool
+see if asset forge is cool
 
-to do this week:
-need functions for going to and from last widget in settings and inventory (theres a widget for that, check fps sesh)
-need function to set selected unit when going back to HUD from settings "					"
+For turn in:
+Pathing on move (A*)
+Initiative tracker
+statblock component (get stats, attack, ability, move dist(?))
+basic enemies
+health/damage component
+basic menu animations, and click sounds across the board
+make the project lighting agnostic
 
-fuckin refactor this state machine to utilize the gameplay state tree, dummy
-make game lighting ambivalent
-if time permits, get path working going
-get alternating state between turns in battle, 
+Notes on Grid Logic: need shapes and materials to utilize terrains, they are being passed, enemy amount handled in player controller?
 
 Things to remember:
-the battle level always initializes to placement state, this will need to be changed when save/load is implemented
+change battle level to include save load logic when implemented
+
+BUGS: 
+1. Camera isn't bounded :(
+
