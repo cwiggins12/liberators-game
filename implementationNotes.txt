@@ -2,18 +2,21 @@ art pipeline:
 see if asset forge is cool
 
 For today:
-Units have to count actions for signal next turn, 
 animate attack, animate take damage, particles, sound,
-Initiative tracker :(
 basic menu animations, and click sounds across the board
 
 basic enemy AI
 Pathing on move (A*)
 make the project lighting agnostic
 Notes on Grid Logic: need shapes and materials to utilize terrains, they are being passed, maybe roll shape and have an Enum for shapes, then do the math for each hex based on each shape or build a bool array then reference that per hex, 
+update statblock hud widget on SelectionChange
+gonna need to allow more freedom on the placement scene, onClick switch for units needed
 
 Things to remember:
 change battle level bp begin play to include save load logic when implemented
 
-BUGS: 
+BUGS:
 1. Camera isn't bounded :(
+2. FindNextUnitInInitiativeOrder is not gonna work right eventually
+3. Need to rework placement logic eventually, may need separate hud to see just unit stats, inventory, and allow for changing their positions
+4. Need initiative tracker
