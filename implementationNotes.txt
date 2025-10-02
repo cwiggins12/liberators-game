@@ -1,22 +1,26 @@
-art pipeline:
-see if asset forge is cool
-
 For today:
-animate attack, animate take damage, particles, sound,
-basic menu animations, and click sounds across the board
+health bars on all units? maybe on initiative order for now?
+REFACTOR BEFORE ADDING ANYTHING ELSE TO THIS PLS
 
 basic enemy AI
 Pathing on move (A*)
 make the project lighting agnostic
 Notes on Grid Logic: need shapes and materials to utilize terrains, they are being passed, maybe roll shape and have an Enum for shapes, then do the math for each hex based on each shape or build a bool array then reference that per hex, 
-update statblock hud widget on SelectionChange
-gonna need to allow more freedom on the placement scene, onClick switch for units needed
+
 
 Things to remember:
 change battle level bp begin play to include save load logic when implemented
 
-BUGS:
+Fixes needed:
 1. Camera isn't bounded :(
 2. FindNextUnitInInitiativeOrder is not gonna work right eventually
 3. Need to rework placement logic eventually, may need separate hud to see just unit stats, inventory, and allow for changing their positions
-4. Need initiative tracker
+4. Fill ability box and abilities in general are not scalable yet
+5. Music starts in onNewGame func in GameMode
+6. Rework initiative order, hex coords, and unit refs to one place when going from placement to battle
+rework music player system eventually
+gonna need to allow more freedom on the placement scene, onClick switch for units needed
+ability buttons need to deactivate when a different one is pressed
+build out oopsNevermind function in abilities
+make a collider that calls a function to take place of start ability in grid logic
+
