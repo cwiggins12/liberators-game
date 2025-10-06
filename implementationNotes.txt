@@ -1,26 +1,48 @@
 For today:
 health bars on all units? maybe on initiative order for now?
-REFACTOR BEFORE ADDING ANYTHING ELSE TO THIS PLS
+Inventory screen, equipment system(component, 2 starting items as examples)
 
+Before Wednesday:
+Full UI rework(green/black color scheme, animate some flickers and crt waves(maybe as a shader?), wipe in from sides, add sounds on change in menu, Victory Screen update, defeat screen update, remove some buttons from main menu, remove settings menu enirely, full reward choice functionality)
+Do what is needed for placement and confirm buttons
+
+Game Mechanics:
+add logic to affect max hp
+fix rotate to enemy during attack
+build out guard ability
 basic enemy AI
 Pathing on move (A*)
+Enemy and Player Unit Downed logic needs a lot of work :(
+Finalize logic for abilities (1v1 and self first, then maybe aoe?)
+
+Level Mechanics:
 make the project lighting agnostic
 Notes on Grid Logic: need shapes and materials to utilize terrains, they are being passed, maybe roll shape and have an Enum for shapes, then do the math for each hex based on each shape or build a bool array then reference that per hex, 
+make the assets for the obstacles during this week
 
+VFX and Animation:
+Selection outline needs love
+Asset forge to make 3d meshes(4 for player units(per class), enemies, obstacles in the map based on terrain type, 
+BP effects for take damage based on damage type
+SHADERS
 
-Things to remember:
-change battle level bp begin play to include save load logic when implemented
+SFX and Music:
+New battle music(long cyberpunk ambient track)
+Victory screen and defeat screen quick tracks
+Full rework of sounds(take damage, move, placement, attack, buff, button click, button hover, button incorrect click, hex incorrect click)
 
 Fixes needed:
-1. Camera isn't bounded :(
-2. FindNextUnitInInitiativeOrder is not gonna work right eventually
-3. Need to rework placement logic eventually, may need separate hud to see just unit stats, inventory, and allow for changing their positions
-4. Fill ability box and abilities in general are not scalable yet
-5. Music starts in onNewGame func in GameMode
-6. Rework initiative order, hex coords, and unit refs to one place when going from placement to battle
-rework music player system eventually
-gonna need to allow more freedom on the placement scene, onClick switch for units needed
-ability buttons need to deactivate when a different one is pressed
-build out oopsNevermind function in abilities
-make a collider that calls a function to take place of start ability in grid logic
+Camera isn't bounded :(
+Currently not using x and y coordinates in units, may not even need them in hexes
 
+Scrapped but will implement after class is over:
+More equipment
+AOE attacks
+More map patterns
+More Enemy types(models and AI)
+Save/Load(check level bps and begin plays of core for fixes), should be minimal implementation in GameState due to all the ref arrays
+Settings
+Combat Log
+Bring back the big ole statblock(MAKE MY ENGAGEMENT SYSTEM DAMMIT), DT, Resistance(needs status effects), 
+bring back attributes and rework char creation entirely(look at design doc for the breakdown of these)
+TOOLTIPS EVERYWHERE
