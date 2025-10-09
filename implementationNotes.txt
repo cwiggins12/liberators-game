@@ -1,48 +1,60 @@
-For today:
-health bars on all units? maybe on initiative order for now?
-Inventory screen, equipment system(component, 2 starting items as examples)
-
-Before Wednesday:
-Full UI rework(green/black color scheme, animate some flickers and crt waves(maybe as a shader?), wipe in from sides, add sounds on change in menu, Victory Screen update, defeat screen update, remove some buttons from main menu, remove settings menu enirely, full reward choice functionality)
-Do what is needed for placement and confirm buttons
-
 Game Mechanics:
-add logic to affect max hp
-fix rotate to enemy during attack
-build out guard ability
+Summary: Movement, Enemy AI, Abilities, Stats, death, and classes
+
+add ability needs to get a class as input or Enum, or funcs for both
+fix stat logic entirely(gonna need a temp stats for temp buffs?, get rid of those min and maxs and just clamp)
+build out more abilities(at least one per class)
 basic enemy AI
-Pathing on move (A*)
-Enemy and Player Unit Downed logic needs a lot of work :(
-Finalize logic for abilities (1v1 and self first, then maybe aoe?)
+Pathing on move for all units(A*)
+Enemy and Player Unit Downed logic
+basic class system, use class Enum to specify in pc how much to give to each unit for level up
 
 Level Mechanics:
-make the project lighting agnostic
-Notes on Grid Logic: need shapes and materials to utilize terrains, they are being passed, maybe roll shape and have an Enum for shapes, then do the math for each hex based on each shape or build a bool array then reference that per hex, 
-make the assets for the obstacles during this week
+Notes on Grid Logic: need materials to utilize terrains, they are being passed, maybe roll shape and have an Enum for shapes, build a bool array then reference that per hex, 
+rewards fixes pls
+enemy scaling
+flavor text on the structs and opening screen(typing animation)
 
 VFX and Animation:
+Have a player turn text animation on player turn start? do the 3 in the corner after fades from noise?
+https://www.youtube.com/watch?v=UWWeEwid8pY		?
+https://www.youtube.com/watch?v=7U2jph6q5EE
 Selection outline needs love
-Asset forge to make 3d meshes(4 for player units(per class), enemies, obstacles in the map based on terrain type, 
-BP effects for take damage based on damage type
-SHADERS
+Asset forge to make 3d meshes(4 for player units(enemies will have different material), obstacles (based on terrain type)?)
+mixamo for animations(idle, melee, range, self, and take damage)
+BP effect for take damage
+cell shader again?
+simple tooltip(hexs, units, keywords in menus, and stat icons)
+portraits in hud, initiative, and victory screen
 
 SFX and Music:
 New battle music(long cyberpunk ambient track)
-Victory screen and defeat screen quick tracks
-Full rework of sounds(take damage, move, placement, attack, buff, button click, button hover, button incorrect click, hex incorrect click)
+Victory screen and defeat screen tracks
+Full rework of sounds(take damage, move, placement, attack, buff, button click, button hover, button incorrect click, hex incorrect click, screen changes, etc)
 
 Fixes needed:
-Camera isn't bounded :(
+Camera isn't bounded and starts in a shitty place :(
 Currently not using x and y coordinates in units, may not even need them in hexes
+make huds' selected player thing smaller?
+
 
 Scrapped but will implement after class is over:
-More equipment
 AOE attacks
 More map patterns
 More Enemy types(models and AI)
 Save/Load(check level bps and begin plays of core for fixes), should be minimal implementation in GameState due to all the ref arrays
-Settings
+Settings Menu
+Bring back the big ole statblock(engagement, DT, Resistance(needs status effects), initiative, reactivity)
+bring back attributes and rework char creation entirely(look at design doc for the breakdown of these)(move to a classless system)
 Combat Log
-Bring back the big ole statblock(MAKE MY ENGAGEMENT SYSTEM DAMMIT), DT, Resistance(needs status effects), 
-bring back attributes and rework char creation entirely(look at design doc for the breakdown of these)
-TOOLTIPS EVERYWHERE
+tooltips
+Inventory system(equip breaks when unit goes down)
+Reactivity and initiative :(
+
+Inventory Menu look notes I had:
+Background with x button in corner
+follow sketch
+anim placement if coming to it from not placement HUD(just a Boolean marker that gets set in placement)
+Use same player info, and statblock, use ability box with all dummy buttons, 
+need 2 equip widgets and an inventory widget to fit into respective areas
+in and out with crt
